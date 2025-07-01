@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bot Control Panel</title>
+    <style> /* CSS Sederhana */
+        body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        label { display: block; margin-top: 10px; }
+        input, textarea, button { width: 100%; padding: 8px; margin-top: 5px; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Bot Control Panel</h1>
+    <form action="/save" method="post">
+        <h2>Pengaturan Akun X.com (tambahkan satu per baris)</h2>
+        <textarea name="x_accounts" rows="5" placeholder="API_KEY,API_SECRET,ACCESS_TOKEN,ACCESS_TOKEN_SECRET"></textarea>
+
+        <h2>Pengaturan API Gemini (tambahkan satu per baris)</h2>
+        <textarea name="gemini_keys" rows="3" placeholder="GEMINI_API_KEY_1..."></textarea>
+
+        <h2>Pengaturan Jadwal (Waktu US - EST, format 24 jam, pisahkan dengan koma)</h2>
+        <input type="text" name="schedule_times" placeholder="Contoh: 08:00,14:00,20:00">
+
+        <h2>Link Custom (Opsional)</h2>
+        <input type="text" name="custom_link" placeholder="https://contoh-link.com">
+
+        <button type="submit">Simpan Pengaturan & Restart Bot</button>
+    </form>
+</body>
+</html>
